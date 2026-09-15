@@ -39,18 +39,15 @@
 
 
 <body>
-<audio id="bgMusic" controls autoplay loop>
+
+    <audio id="bgMusic" loop>
     <source src="Ocean1.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-window.addEventListener("load", function () {
-    const music = document.getElementById("bgMusic");
-    music.volume = 1;
-    music.play().catch(function () {
-        console.log("瀏覽器阻止了自動播放");
-    });
-});
+document.addEventListener("click", function () {
+    document.getElementById("bgMusic").play();
+}, { once: true });
 </script>
     
 <h1>🤍</h1>
