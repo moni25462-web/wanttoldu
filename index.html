@@ -57,6 +57,22 @@
     50% {
         opacity: 0.4;
     }
+
+#startScreen > * {
+    animation:
+        popIn 1s ease 0.3s both,
+        float 3s ease-in-out 1.3s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+    
 }
   </style>
 </head>
