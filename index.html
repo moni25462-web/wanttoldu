@@ -59,6 +59,10 @@
     }
 
 #startScreen > * {
+    animation: popIn 1s ease 0.3s both;
+}
+
+#startScreen .floating {
     animation:
         popIn 1s ease 0.3s both,
         float 3s ease-in-out 1.3s infinite;
@@ -68,6 +72,7 @@
     0%, 100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
