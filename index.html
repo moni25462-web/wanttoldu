@@ -34,19 +34,51 @@
       max-width: 400px;
       border-radius: 15px;
     }
+
+    #startScreen {
+    position: fixed;
+    inset: 0;
+    background: #fff8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-size: 20px;
+}
+
+#startScreen p {
+    font-size: 14px;
+    margin-top: 15px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.4;
+    }
+}
   </style>
 </head>
 
 
 <body>
-
+    
+<div id="startScreen">
+    <div>♡ 給你的一份小驚喜 ♡</div>
+    <p>點一下畫面繼續 ☁️</p>
+</div>
     <audio id="bgMusic" loop>
     <source src="Ocean1.mp3" type="audio/mpeg">
 </audio>
 
 <script>
+const music = document.getElementById("bgMusic");
+const startScreen = document.getElementById("startScreen");
+
 document.addEventListener("click", function () {
-    document.getElementById("bgMusic").play();
+    music.play();
+    startScreen.style.display = "none";
 }, { once: true });
 </script>
     
