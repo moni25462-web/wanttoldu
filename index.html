@@ -40,31 +40,9 @@
 
 <body>
 
+<audio id="music" src="Ocean1.mp3" loop></audio>
 
 
-<audio id="music" autoplay loop>
-    <source src="Ocean1.mp3" type="audio/mpeg">
-</audio>
-
-<button id="playButton" onclick="playMusic()">
-    🎵 點我播放
-</button>
-
-<script>
-function playMusic() {
-    const music = document.getElementById("music");
-    music.play();
-    document.getElementById("playButton").style.display = "none";
-}
-
-window.addEventListener("load", function() {
-    const music = document.getElementById("music");
-
-    music.play().catch(function() {
-        document.getElementById("playButton").style.display = "block";
-    });
-});
-</script>
     
 <h1>🤍</h1>
 
